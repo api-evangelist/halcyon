@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of www.halcyon.ai and api.halcyon.ai
+note: >-
+  No public /.well-known/ discovery documents were served. The API host
+  api.halcyon.ai returns 403 (customer-authenticated; not publicly reachable);
+  the marketing host serves no security.txt, openid-configuration, api-catalog,
+  or ai-plugin.json. Recorded honestly — absence is valid data; no WellKnown
+  pointer is wired because nothing returned 200.
+hosts:
+- host: https://www.halcyon.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /security.txt
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://api.halcyon.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403

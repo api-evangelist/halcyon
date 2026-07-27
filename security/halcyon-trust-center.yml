@@ -1,0 +1,12 @@
+generated: '2026-07-19'
+method: searched
+probe: true
+source: https://trust.halcyon.ai/
+url: https://trust.halcyon.ai/
+certifications:
+- SOC 2
+evidence:
+- source: https://trust.halcyon.ai/
+  keywords:
+  - soc 2
+  - trust center
